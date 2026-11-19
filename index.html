@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+ <meta charset="UTF‑8">
+ <meta name="viewport" content="width=device‑width, initial‑scale=1.0">
+ <title>Allowance Budget Tracker</title>
+ <style>
+ body {font-family: Arial; padding: 15px; max-width: 380px; margin: auto;}
+ .box {background: #e8f4ff; padding: 12px; border-radius: 8px;}
+ input {width: 100%; padding: 9px; margin: 6px 0;}
+ button {width: 100%; padding: 9px; background: #2196F3; color: white; border: none; border-radius: 6px;}
+ li {background: #f3f7ff; padding: 8px; margin: 4px 0; list-style: none;}
+ </style>
+ </head>
+ <body>
+ <div class="box">
+   <h2>💰 Allowance Tracker</h2>
+   <p>Total Allowance: ₱<span id="allowance">0.00</span></p>
+   <p>Remaining: ₱<span id="remaining">0.00</span></p>
+   <p>Total Spent: ₱<span id="spent">0.00</span></p>
+ </div>
+ <h4>Set your allowance</h4>
+ <input type="number" id="inputAllowance" placeholder="Enter allowance amount">
+ <button onclick="setAllowance()">Set Allowance</button>
+ <h4>➕ Add expense</h4>
+ <input type="text" id="inputDesc" placeholder="Example: Fare">
+ <input type="number" id="inputAmount" placeholder="Amount">
+ <button onclick="addExpense()">Save Expense</button>
+ <h4>📋 Expense List</h4>
+ <ul id="expenseList"></ul>
+ <script>
+ let totalAllowance = 0;
+ let totalSpent = 0;
+ function setAllowance() {
+   totalAllowance = Number(document.getElementById('inputAllowance').value);
+   document.getElementById('allowance').textContent = totalAllowance.toFixed(2);
+   updateRemaining();
+ }
+ function addExpense() {
+   let desc = document.getElementById('inputDesc').value;
+   let amount = Number(document.getElementById('inputAmount').value);
+   totalSpent += amount;
+   document.getElementById('spent').textContent = totalSpent.toFixed(2);
+   updateRemaining();
+   let listItem = document.createElement('li');
+   listItem.textContent = desc + " — ₱" + amount.toFixed(2);
+   document.getElementById('expenseList').appendChild(listItem);
+   document.getElementById('inputDesc').value = "";
+   document.getElementById('inputAmount').value = "";
+ }
+ function updateRemaining() {
+   let balance = totalAllowance - totalSpent;
+   document.getElementById('remaining').textContent = balance.toFixed(2);
+ }
+ </script>
+ </body>
+ </html>
