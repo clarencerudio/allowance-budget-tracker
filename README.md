@@ -28,3 +28,8 @@ This application lets students set their weekly allowance, record daily expenses
 2. Download / Clone this repository
 3. Open index.html in any browser (Chrome recommended)
 4. No installation needed - just open and use!
+
+Live Link:https://clarencerudio.github.io/allowance-budget-tracker/
+
+## Author
+Name: Clarence A. Rudio Section: BSINTE 2A
