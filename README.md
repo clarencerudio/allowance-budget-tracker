@@ -22,3 +22,9 @@ This application lets students set their weekly allowance, record daily expenses
 2. Add daily expenses like fare or snacks.
 3. The app automatically computes total spent money and remaining balance.
 4. It shows a list of all recorded expenses.
+
+## How to Install and Run
+Open the live link below, or
+Download / Clone this repository
+Open index.html in any browser (Chrome recommended)
+No installation needed - just open and use!
