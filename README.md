@@ -24,7 +24,7 @@ This application lets students set their weekly allowance, record daily expenses
 4. It shows a list of all recorded expenses.
 
 ## How to Install and Run
-1.Open the live link below, or
-2.Download / Clone this repository
-3.Open index.html in any browser (Chrome recommended)
-4.No installation needed - just open and use!
+1. Open the live link below, or
+2. Download / Clone this repository
+3. Open index.html in any browser (Chrome recommended)
+4. No installation needed - just open and use!
